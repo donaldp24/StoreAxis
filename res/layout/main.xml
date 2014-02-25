@@ -1,13 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			  android:orientation="vertical"
-			  android:layout_width="fill_parent"
-			  android:layout_height="fill_parent"
+			  android:id="@+id/layout_splash"
+			  android:layout_width="768px"
+			  android:layout_height="1280px"
+			  android:background="@color/SplashBgColor"
 		>
-	<TextView
-			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:text="Hello World, StartActivity"
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="768px"
+			android:layout_height="639px"
+			android:background="@drawable/splash_earth"
 			/>
-</LinearLayout>
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="221px"
+			android:layout_width="768px"
+			android:layout_height="366px"
+			android:background="@drawable/splash_title"
+			/>
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="221px"
+			android:layout_width="768px"
+			android:layout_height="366px"
+			android:background="@drawable/splash_title"
+			/>
+	<ImageView
+
+			android:layout_marginLeft="384px"
+			android:layout_marginTop="994px"
+			android:layout_width="384px"
+			android:layout_height="286px"
+			android:background="@android:color/white"
+			/>
+	<Button
+			android:id="@+id/btn_login"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="994px"
+			android:layout_width="384px"
+			android:layout_height="286px"
+			android:background="@drawable/splash_btn_login_normal"
+			/>
+	<Button
+			android:id="@+id/btn_register"
+			android:layout_marginLeft="384px"
+			android:layout_marginTop="994px"
+			android:layout_width="384px"
+			android:layout_height="286px"
+			android:background="@drawable/splash_btn_register_normal"
+			/>
+
+	<Button
+			android:id="@+id/btn_forgetpwd"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="1137px"
+			android:layout_width="384px"
+			android:layout_height="143px"
+			android:background="@drawable/splash_btn_forgetpwd_normal"
+			/>
+</RelativeLayout>
 

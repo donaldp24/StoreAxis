@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/layout_option"
+				android:layout_width="match_parent"
+				android:layout_height="282px"
+				android:background="@color/color_choption_bg"
+		>
+	<Button
+			android:id="@+id/btn_back"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background = "@android:color/transparent"
+			/>
+	<ImageView
+			android:id = "@+id/img_good"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="282px"
+			android:layout_height="282px"
+			android:layout_alignParentRight="true"
+			/>
+
+	<TextView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="486px"
+			android:layout_height="282px"
+			android:background="@android:color/transparent"
+			android:text="text"
+			android:layout_toLeftOf="@+id/img_good"
+			android:gravity="center"
+			/>
+
+</RelativeLayout>

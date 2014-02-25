@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:id="@+id/layout_locationlayers"
+			  android:layout_width="768px"
+			  android:layout_height="1280px"
+			  android:background="@android:color/white"
+		>
+
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="768px"
+			android:layout_height="117px"
+			android:background="@color/SplashBgColor"
+			/>
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="255px"
+			android:layout_height="117px"
+			android:background="@drawable/header_title"
+			/>
+	<Button
+			android:id="@+id/btn_search"
+			android:layout_marginLeft="630px"
+			android:layout_marginTop="0px"
+			android:layout_width="138px"
+			android:layout_height="117px"
+			android:background="@drawable/header_btn_search_normal"
+			/>
+
+
+	<!-- -->
+	<TextView
+			android:id="@+id/txt_name"
+			android:layout_marginLeft="21px"
+			android:layout_marginTop="161px"
+			android:layout_width="600px"
+			android:layout_height="60px"
+			android:text="Hasbro Fun Finder"
+			android:textSize="6pt"
+			android:background="@android:color/transparent"
+			/>
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="233px"
+			android:layout_width="768px"
+			android:layout_height="428px"
+			android:background="@drawable/locate_good"
+			/>
+
+
+	<ImageView
+			android:id="@+id/img_far"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="667px"
+			android:layout_width="768px"
+			android:layout_height="471px"
+			android:background="@drawable/locate_far_normal"
+			/>
+
+	<TextView
+			android:id="@+id/txt_far"
+			android:layout_marginLeft="90px"
+			android:layout_marginTop="680px"
+			android:layout_width="600px"
+			android:layout_height="80px"
+			android:text="@string/str_far"
+			android:textSize="10pt"
+			android:gravity="center"
+			android:background="@android:color/transparent"
+			/>
+
+	<ImageView
+			android:id="@+id/img_closer"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="667px"
+			android:layout_width="768px"
+			android:layout_height="471px"
+			android:background="@drawable/locate_closer_normal"
+			/>
+
+	<TextView
+			android:id="@+id/txt_closer"
+			android:layout_marginLeft="90px"
+			android:layout_marginTop="830px"
+			android:layout_width="600px"
+			android:layout_height="80px"
+			android:text="@string/str_closer"
+			android:textSize="10pt"
+			android:gravity="center"
+			android:background="@android:color/transparent"
+			/>
+
+	<ImageView
+			android:id="@+id/img_near"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="667px"
+			android:layout_width="768px"
+			android:layout_height="471px"
+			android:background="@drawable/locate_near_normal"
+			/>
+
+	<TextView
+			android:id="@+id/txt_near"
+			android:layout_marginLeft="90px"
+			android:layout_marginTop="1020px"
+			android:layout_width="600px"
+			android:layout_height="80px"
+			android:text="@string/str_near"
+			android:textSize="10pt"
+			android:gravity="center"
+			android:background="@android:color/transparent"
+			/>
+
+	<!-- bottom bar -->
+	<Button
+			android:id="@+id/btn_refresh"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="1142px"
+			android:layout_width="152px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_refresh_normal"
+			/>
+	<Button
+			android:id="@+id/btn_locate"
+			android:layout_marginLeft="153px"
+			android:layout_marginTop="1142px"
+			android:layout_width="152px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_locate_normal"
+			/>
+	<Button
+			android:id="@+id/btn_settings"
+			android:layout_marginLeft="306px"
+			android:layout_marginTop="1142px"
+			android:layout_width="153px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_settings_normal"
+			/>
+	<Button
+			android:id="@+id/btn_setup"
+			android:layout_marginLeft="460px"
+			android:layout_marginTop="1142px"
+			android:layout_width="153px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_setup_normal"
+			/>
+	<Button
+			android:id="@+id/btn_complete"
+			android:layout_marginLeft="614px"
+			android:layout_marginTop="1142px"
+			android:layout_width="153px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_complete_normal"
+			/>
+	<!-- -->
+</RelativeLayout>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="SplashBgColor">#212322</color>
+	<color name="color_dest_text">#959595</color>
+	<color name="color_dest_bg">#f4f4f4</color>
+	<color name="color_choose_bg">#faf5fd</color>
+	<color name="color_choption_bg">#f4f4f4</color>
+</resources>

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="app_name">StoreAxis</string>
-</resources>
+	<string name="str_far">Far</string>
+	<string name="str_closer">Closer</string>
+	<string name="str_near">Near</string>
+	<string name="str_ble_not_supported">Bluetooth Low Energy not supported</string>
+	</resources>

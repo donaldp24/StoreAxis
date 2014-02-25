@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:id="@+id/layout_chooseoptions"
+			  android:layout_width="768px"
+			  android:layout_height="1280px"
+			  android:background="@color/color_choose_bg"
+		>
+
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="768px"
+			android:layout_height="117px"
+			android:background="@color/SplashBgColor"
+			/>
+	<ImageView
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="0px"
+			android:layout_width="255px"
+			android:layout_height="117px"
+			android:background="@drawable/header_title"
+			/>
+	<Button
+			android:id="@+id/btn_search"
+			android:layout_marginLeft="630px"
+			android:layout_marginTop="0px"
+			android:layout_width="138px"
+			android:layout_height="117px"
+			android:background="@drawable/header_btn_search_normal"
+			/>
+
+
+	<!-- -->
+	<TextView
+			android:id="@+id/txt_exp"
+			android:layout_marginLeft="21px"
+			android:layout_marginTop="161px"
+			android:layout_width="160px"
+			android:layout_height="60px"
+			android:text="Results for"
+			android:textSize="6pt"
+			android:background="@android:color/transparent"
+			/>
+	<TextView
+			android:id="@+id/txt_dest"
+			android:layout_marginLeft="160px"
+			android:layout_marginTop="161px"
+			android:layout_width="600px"
+			android:layout_height="60px"
+			android:text="Walmart"
+			android:textSize="6pt"
+			android:textColor="@android:color/holo_purple"
+			android:background="@android:color/transparent"
+			/>
+
+	<ListView
+			android:id="@+id/list_options"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="255px"
+			android:layout_width="match_parent"
+			android:layout_height="882px">
+	</ListView>
+
+	<!-- bottom bar -->
+	<Button
+			android:id="@+id/btn_refresh"
+			android:layout_marginLeft="0px"
+			android:layout_marginTop="1142px"
+			android:layout_width="152px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_refresh_normal"
+			/>
+	<Button
+			android:id="@+id/btn_locate"
+			android:layout_marginLeft="153px"
+			android:layout_marginTop="1142px"
+			android:layout_width="152px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_locate_normal"
+			/>
+	<Button
+			android:id="@+id/btn_settings"
+			android:layout_marginLeft="306px"
+			android:layout_marginTop="1142px"
+			android:layout_width="153px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_settings_normal"
+			/>
+	<Button
+			android:id="@+id/btn_setup"
+			android:layout_marginLeft="460px"
+			android:layout_marginTop="1142px"
+			android:layout_width="153px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_setup_normal"
+			/>
+	<Button
+			android:id="@+id/btn_complete"
+			android:layout_marginLeft="614px"
+			android:layout_marginTop="1142px"
+			android:layout_width="153px"
+			android:layout_height="137px"
+			android:background="@drawable/bottom_btn_complete_normal"
+			/>
+	<!-- -->
+</RelativeLayout>
+
