@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -106,54 +107,49 @@ public class ChooseOptionsActivity extends Activity {
             return (list.size());
         }
 
+
         @Override
         public long getItemId(int position) {
             return position;
         }
 
+
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             View v = convertView;
-
-            if (v == null)
+            LayoutInflater inflater = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            if ((position + 1) % 2 == 0)
             {
-                try
-                {
-                    LayoutInflater inflater = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                    if (position % 2 == 0)
-                    {
-                        v = inflater.inflate(R.layout.evenchooseoption, null);
-                    }
-                    else
-                    {
-                        v = inflater.inflate(R.layout.oddchooseoption, null);
-                    }
-                    STOptionInfo info = list.get(position);
-                    ImageView imgView = (ImageView)findViewById(R.id.img_good);
-                    imgView.setBackgroundResource(info.nResImg);
-
-                    TextView txtExplain = (TextView)findViewById(R.id.txt_exp);
-                    txtExplain.setText(info.strExplain);
-
-                    Button btnBack = (Button)findViewById(R.id.btn_back);
-                    btnBack.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v)
-                        {
-                            Intent intent = new Intent(ctx, LocationLayersActivity.class);
-                            startActivity(intent);
-                            overridePendingTransition(TransformManager.GetContinueInAnim(), TransformManager.GetContinueOutAnim());
-                            finish();
-                        }
-                    });
-
-                    ResolutionSet._instance.iterateChild(v.findViewById(R.id.layout_option));
-                }
-                catch(Exception e)
-                {
-                    e.printStackTrace();
-                }
+                v = inflater.inflate(R.layout.evenchooseoption, null);
             }
+            else
+            {
+                v = inflater.inflate(R.layout.oddchooseoption, null);
+            }
+            ResolutionSet._instance.iterateChild(v.findViewById(R.id.layout_option));
+
+            STOptionInfo info = list.get(position);
+            ImageView imgView = (ImageView)v.findViewById(R.id.img_good);
+            imgView.setBackgroundResource(info.nResImg);
+
+            TextView txtExplain = (TextView)v.findViewById(R.id.option_txt_exp);
+            txtExplain.setText(info.strExplain);
+
+            Button btnBack = (Button)v.findViewById(R.id.btn_back);
+
+            btnBack.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    Intent intent = new Intent(ctx, LocationLayersActivity.class);
+                    startActivity(intent);
+                    overridePendingTransition(TransformManager.GetContinueInAnim(), TransformManager.GetContinueOutAnim());
+                    finish();
+                }
+            });
+
+
+            Log.d("position : ", position + "");
 
             return v;
         }

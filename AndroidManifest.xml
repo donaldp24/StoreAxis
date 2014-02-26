@@ -31,6 +31,10 @@
 				  android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
 				  android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"
 				/>
-		<service android:name=".BluetoothLEService"/>
+		<activity android:name=".ChooseLocationsActivity"
+				  android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+				  android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden"
+				/>
+
 	</application>
 </manifest>

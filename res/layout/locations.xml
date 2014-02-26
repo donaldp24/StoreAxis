@@ -69,31 +69,39 @@
 			/>
 
 
+
+
+	<view android:layout_width="match_parent"
+		  android:layout_height="800px"
+		  class="com.wallmat.StoreAxis.HorizontalPager" android:id="@+id/hor_pager" android:layout_marginLeft="0px"
+		  android:layout_marginTop="343px"/>
+
 	<ImageView
-			android:id="@+id/img_dest"
-			android:layout_marginLeft="0px"
-			android:layout_marginTop="343px"
-			android:layout_width="768px"
-			android:layout_height="800px"
-			android:background="@drawable/locations_lowes"
+			android:id="@+id/img_sel"
+			android:layout_marginLeft="300px"
+			android:layout_marginTop="1060px"
+			android:layout_width="164px"
+			android:layout_height="20px"
+			android:background="@drawable/locations_sel1"
 			/>
 
 	<!-- bottom bar -->
+
 	<Button
-			android:id="@+id/btn_refresh"
+			android:id="@+id/btn_retailer"
 			android:layout_marginLeft="0px"
 			android:layout_marginTop="1142px"
 			android:layout_width="152px"
 			android:layout_height="137px"
-			android:background="@drawable/bottom_btn_refresh_normal"
+			android:background="@drawable/bottom_btn_retailer_normal"
 			/>
 	<Button
-			android:id="@+id/btn_locate"
+			android:id="@+id/btn_choose"
 			android:layout_marginLeft="153px"
 			android:layout_marginTop="1142px"
 			android:layout_width="152px"
 			android:layout_height="137px"
-			android:background="@drawable/bottom_btn_locate_normal"
+			android:background="@drawable/bottom_btn_choose_normal"
 			/>
 	<Button
 			android:id="@+id/btn_settings"

@@ -116,20 +116,20 @@
 
 	<!-- bottom bar -->
 	<Button
-			android:id="@+id/btn_refresh"
+			android:id="@+id/btn_retailer"
 			android:layout_marginLeft="0px"
 			android:layout_marginTop="1142px"
 			android:layout_width="152px"
 			android:layout_height="137px"
-			android:background="@drawable/bottom_btn_refresh_normal"
+			android:background="@drawable/bottom_btn_retailer_normal"
 			/>
 	<Button
-			android:id="@+id/btn_locate"
+			android:id="@+id/btn_choose"
 			android:layout_marginLeft="153px"
 			android:layout_marginTop="1142px"
 			android:layout_width="152px"
 			android:layout_height="137px"
-			android:background="@drawable/bottom_btn_locate_normal"
+			android:background="@drawable/bottom_btn_choose_normal"
 			/>
 	<Button
 			android:id="@+id/btn_settings"

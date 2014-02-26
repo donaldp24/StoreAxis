@@ -24,7 +24,7 @@ public class StartActivity extends Activity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, ChooseOptionsActivity.class);
+                Intent intent = new Intent(StartActivity.this, ChooseLocationsActivity.class);
                 startActivity(intent);
                 overridePendingTransition(TransformManager.GetContinueInAnim(), TransformManager.GetContinueOutAnim());
                 finish();
@@ -53,8 +53,7 @@ public class StartActivity extends Activity {
 
         Point ptSize = ResolutionSet.getScreenSize(StartActivity.this, false, true);
         ResolutionSet._instance.setResolution(ptSize.x, ptSize.y, true);
+
         ResolutionSet._instance.iterateChild(findViewById(R.id.layout_splash));
-
-
     }
 }
