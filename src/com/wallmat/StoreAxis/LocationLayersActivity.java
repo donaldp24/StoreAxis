@@ -29,6 +29,9 @@ public class LocationLayersActivity extends Activity implements BluetoothControl
     private BluetoothControlThread mBleThread = null;
     private long mLastFlashTime = 0;
 
+    //private UUID uuidBle = UUID.fromString("F9266FD7-EF07-45D6-8EB6-BD74F13620F9");
+    private UUID uuidBle = UUID.fromString("e2c56db5-dffb-48d2-b060-d0f5a71096e0");
+
 
     // distance
     private static final int DIST_NONE = -1;
@@ -104,7 +107,8 @@ public class LocationLayersActivity extends Activity implements BluetoothControl
         // initialize
         if (mBluetoothAdapter.isEnabled())
         {
-            mBleThread = new BluetoothControlThread(mBluetoothAdapter, UUID.fromString("F9266FD7-EF07-45D6-8EB6-BD74F13620F9"));
+            //mBleThread = new BluetoothControlThread(mBluetoothAdapter, UUID.fromString("F9266FD7-EF07-45D6-8EB6-BD74F13620F9"));
+            mBleThread = new BluetoothControlThread(mBluetoothAdapter, uuidBle);
             mBleThread.setListener(this);
             mBleThread.startControl();
         }
