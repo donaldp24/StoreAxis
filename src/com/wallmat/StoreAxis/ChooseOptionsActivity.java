@@ -135,13 +135,14 @@ public class ChooseOptionsActivity extends Activity {
             TextView txtExplain = (TextView)v.findViewById(R.id.option_txt_exp);
             txtExplain.setText(info.strExplain);
 
-            Button btnBack = (Button)v.findViewById(R.id.btn_back);
+            Button btnBg = (Button)v.findViewById(R.id.btn_bg);
 
-            btnBack.setOnClickListener(new View.OnClickListener() {
+            btnBg.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v)
                 {
-                    Intent intent = new Intent(ctx, LocationLayersActivity.class);
+                    //Intent intent = new Intent(ctx, LocationLayersActivity.class);
+                    Intent intent = new Intent(ctx, BeaconLayerActivity.class);
                     startActivity(intent);
                     overridePendingTransition(TransformManager.GetContinueInAnim(), TransformManager.GetContinueOutAnim());
                     finish();

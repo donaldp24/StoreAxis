@@ -30,7 +30,7 @@ public class LocationLayersActivity extends Activity implements BluetoothControl
     private long mLastFlashTime = 0;
 
     //private UUID uuidBle = UUID.fromString("F9266FD7-EF07-45D6-8EB6-BD74F13620F9");
-    private UUID uuidBle = UUID.fromString("e2c56db5-dffb-48d2-b060-d0f5a71096e0");
+    private UUID uuidBle = UUID.fromString("E2C56DB5-DFFB-48D2-B060-D0F5A71096E0");
 
 
     // distance

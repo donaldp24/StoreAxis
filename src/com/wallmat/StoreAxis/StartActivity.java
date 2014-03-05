@@ -34,7 +34,7 @@ public class StartActivity extends Activity {
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, LocationLayersActivity.class);
+                Intent intent = new Intent(StartActivity.this, BeaconLayerActivity.class);
                 startActivity(intent);
                 overridePendingTransition(TransformManager.GetContinueInAnim(), TransformManager.GetContinueOutAnim());
                 finish();
@@ -44,7 +44,7 @@ public class StartActivity extends Activity {
         btnForgetPwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, LocationLayersActivity.class);
+                Intent intent = new Intent(StartActivity.this, BeaconLayerActivity.class);
                 startActivity(intent);
                 overridePendingTransition(TransformManager.GetContinueInAnim(), TransformManager.GetContinueOutAnim());
                 finish();
