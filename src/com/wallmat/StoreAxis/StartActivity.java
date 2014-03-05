@@ -50,6 +50,7 @@ public class StartActivity extends Activity {
                 finish();
             }
         });
+        btnForgetPwd.setVisibility(View.GONE);
 
         Point ptSize = ResolutionSet.getScreenSize(StartActivity.this, false, true);
         ResolutionSet._instance.setResolution(ptSize.x, ptSize.y, true);

@@ -8,6 +8,7 @@ import com.radiusnetworks.ibeacon.*;
 
 import java.util.Collection;
 import java.util.UUID;
+import android.os.Handler;
 
 /**
  * Created by donald on 3/5/14.
@@ -31,6 +32,28 @@ public class BeaconLayerActivity extends Activity implements IBeaconConsumer {
     private int nNumIndex = 0;
     private int nRssi = 0;
 
+/*
+    private Handler flashingHandler = new Handler();
+    private Runnable flashing = new Runnable() {
+        @Override
+        public void run() {
+            if (nRssi == 0)
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        resetFlashing();
+                    }
+                });
+            else
+                runOnUiThread(new Runnable() {
+                    @Override
+                public void run() {
+                        setFlashing(getDistanceWithRSSI(nRssi));
+                    }
+                });
+        }
+    };
+*/
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.locationlayers);
@@ -72,18 +95,26 @@ public class BeaconLayerActivity extends Activity implements IBeaconConsumer {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            setFlashing(nRssi);
+                            setFlashing(getDistanceWithRSSI(nRssi));
                         }
                     });
                 }
                 else
                 {
+                    nRssi = 0;
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            setFlashing(getDistanceWithRSSI(nRssi));
+                        }
+                    });
+                    /*
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
                             resetFlashing();
                         }
-                    });
+                    });*/
                 }
             }
 
@@ -98,6 +129,8 @@ public class BeaconLayerActivity extends Activity implements IBeaconConsumer {
 
     private int getDistanceWithRSSI(int rssi)
     {
+        if (rssi == 0)
+            return DIST_FAR;
         if (rssi < -90)
             return DIST_FAR;
         if (rssi < -70)
