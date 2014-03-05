@@ -3,6 +3,7 @@ package com.wallmat.StoreAxis;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.view.View;
 import android.widget.ImageView;
 import com.radiusnetworks.ibeacon.*;
 
@@ -28,6 +29,10 @@ public class BeaconLayerActivity extends Activity implements IBeaconConsumer {
     private ImageView imgNear = null;
     private ImageView imgCloser = null;
     private ImageView imgFar = null;
+    private ImageView imgNearFlashing = null;
+    private ImageView imgCloserFlashing = null;
+    private ImageView imgFarFlashing = null;
+
 
     private int nNumIndex = 0;
     private int nRssi = 0;
@@ -61,6 +66,9 @@ public class BeaconLayerActivity extends Activity implements IBeaconConsumer {
         imgNear = (ImageView) findViewById(R.id.img_near);
         imgCloser = (ImageView) findViewById(R.id.img_closer);
         imgFar = (ImageView) findViewById(R.id.img_far);
+        imgNearFlashing = (ImageView) findViewById(R.id.img_near_flashing);
+        imgCloserFlashing = (ImageView) findViewById(R.id.img_closer_flahsing);
+        imgFarFlashing = (ImageView) findViewById(R.id.img_far_flahsing);
 
         ResolutionSet._instance.iterateChild(findViewById(R.id.layout_locationlayers));
 
@@ -140,9 +148,13 @@ public class BeaconLayerActivity extends Activity implements IBeaconConsumer {
 
     private void resetFlashing()
     {
-        imgNear.setImageResource(R.drawable.locate_near_normal);
-        imgCloser.setImageResource(R.drawable.locate_closer_normal);
-        imgFar.setImageResource(R.drawable.locate_far_normal);
+        imgNear.setVisibility(View.VISIBLE);
+        imgNearFlashing.setVisibility(View.INVISIBLE);
+        imgCloser.setVisibility(View.VISIBLE);
+        imgCloserFlashing.setVisibility(View.INVISIBLE);
+        imgFar.setVisibility(View.VISIBLE);
+        imgFarFlashing.setVisibility(View.INVISIBLE);
+
     }
 
     private void setFlashing(int nIndex)
@@ -151,30 +163,57 @@ public class BeaconLayerActivity extends Activity implements IBeaconConsumer {
             resetFlashing();
         if (nIndex == DIST_NEAR)
         {
-            if (nNumIndex % 2 == 0)
-                imgNear.setImageResource(R.drawable.locate_near_normal);
-            else
-                imgNear.setImageResource(R.drawable.locate_near_flashing);
-            imgCloser.setImageResource(R.drawable.locate_closer_normal);
-            imgFar.setImageResource(R.drawable.locate_far_normal);
+            if (nNumIndex % 2 == 0) {
+                imgNear.setVisibility(View.VISIBLE);
+                imgNearFlashing.setVisibility(View.INVISIBLE);
+            } else {
+                imgNear.setVisibility(View.INVISIBLE);
+                imgNearFlashing.setVisibility(View.VISIBLE);
+            }
+
+
+            imgCloser.setVisibility(View.VISIBLE);
+            imgCloserFlashing.setVisibility(View.INVISIBLE);
+            imgFar.setVisibility(View.VISIBLE);
+            imgFarFlashing.setVisibility(View.INVISIBLE);
+
+
         }
         else if (nIndex == DIST_CLOSER)
         {
-            imgNear.setImageResource(R.drawable.locate_near_normal);
-            if (nNumIndex % 2 == 0)
-                imgCloser.setImageResource(R.drawable.locate_closer_normal);
-            else
-                imgCloser.setImageResource(R.drawable.locate_closer_flashing);
-            imgFar.setImageResource(R.drawable.locate_far_normal);
+
+            imgNear.setVisibility(View.VISIBLE);
+            imgNearFlashing.setVisibility(View.INVISIBLE);
+
+            if (nNumIndex % 2 == 0) {
+
+                imgCloser.setVisibility(View.VISIBLE);
+                imgCloserFlashing.setVisibility(View.INVISIBLE);
+
+            } else {
+
+                imgCloser.setVisibility(View.INVISIBLE);
+                imgCloserFlashing.setVisibility(View.VISIBLE);
+
+            }
+
+            imgFar.setVisibility(View.VISIBLE);
+            imgFarFlashing.setVisibility(View.INVISIBLE);
         }
         else if (nIndex == DIST_FAR)
         {
-            imgNear.setImageResource(R.drawable.locate_near_normal);
-            imgCloser.setImageResource(R.drawable.locate_closer_normal);
-            if (nNumIndex % 2 == 0)
-                imgFar.setImageResource(R.drawable.locate_far_normal);
-            else
-                imgFar.setImageResource(R.drawable.locate_far_flashing);
+            imgNear.setVisibility(View.VISIBLE);
+            imgNearFlashing.setVisibility(View.INVISIBLE);
+            imgCloser.setVisibility(View.VISIBLE);
+            imgCloserFlashing.setVisibility(View.INVISIBLE);
+
+            if (nNumIndex % 2 == 0) {
+                imgFar.setVisibility(View.VISIBLE);
+                imgFarFlashing.setVisibility(View.INVISIBLE);
+            }else{
+                imgFar.setVisibility(View.INVISIBLE);
+                imgFarFlashing.setVisibility(View.VISIBLE);
+            }
         }
         nNumIndex++;
     }

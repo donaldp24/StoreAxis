@@ -52,13 +52,21 @@
 
 
 	<ImageView
-			android:id="@+id/img_far"
+			android:id="@+id/img_far_flahsing"
 			android:layout_marginLeft="0px"
 			android:layout_marginTop="667px"
 			android:layout_width="768px"
 			android:layout_height="471px"
-			android:background="@drawable/locate_far_normal"
+			android:background="@drawable/locate_far_flashing"
 			/>
+    <ImageView
+            android:id="@+id/img_far"
+            android:layout_marginLeft="0px"
+            android:layout_marginTop="667px"
+            android:layout_width="768px"
+            android:layout_height="471px"
+            android:background="@drawable/locate_far_normal"
+            />
 
 	<TextView
 			android:id="@+id/txt_far"
@@ -71,6 +79,15 @@
 			android:gravity="center"
 			android:background="@android:color/transparent"
 			/>
+
+    <ImageView
+            android:id="@+id/img_closer_flahsing"
+            android:layout_marginLeft="0px"
+            android:layout_marginTop="667px"
+            android:layout_width="768px"
+            android:layout_height="471px"
+            android:background="@drawable/locate_closer_flashing"
+            />
 
 	<ImageView
 			android:id="@+id/img_closer"
@@ -93,6 +110,14 @@
 			android:background="@android:color/transparent"
 			/>
 
+    <ImageView
+            android:id="@+id/img_near_flashing"
+            android:layout_marginLeft="0px"
+            android:layout_marginTop="667px"
+            android:layout_width="768px"
+            android:layout_height="471px"
+            android:background="@drawable/locate_near_flashing"
+            />
 	<ImageView
 			android:id="@+id/img_near"
 			android:layout_marginLeft="0px"
